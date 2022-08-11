@@ -1,0 +1,49 @@
+/* imports */
+@import "./Main";
+
+.CTA {
+    background-color: $primaryBtn-color;
+    color: $main-background-color;
+    padding: 1rem 3rem;
+    padding-bottom: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow-x: hidden;
+    .CTA-content {
+        flex: 50%;
+        .title {
+            font-size: 2.4em;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+    }
+
+    .CTA-image {
+        flex: 50%;
+
+        img {
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .CTA {
+        flex-direction: column;
+        padding: 1rem;
+        font-size: 1.2em;
+
+        .CTA-image {
+            order: 1;
+        }
+
+        .CTA-content {
+            order: 2;
+
+            .title {
+                font-size: 2em;
+            }
+        }
+    }
+}

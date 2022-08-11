@@ -1,0 +1,26 @@
+
+/* Variables*/
+$main-text-color : #230F0F;
+$main-text-linear-color : rgb(35, 15, 15,.20);
+$title-text-card:#0A0A0A;
+$secondary-text-color:#4D4D4D;
+$third-color :#777795;
+$names-color:#1C1D4E;
+$blue:#086BED;
+$gray: #80848E;
+$hr-color:#DCDCE5;
+$main-background-color: #FFFFFF;
+$primaryBtn-color: #DC4298;
+$border-color:#ECEFF4;
+
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Lobster&family=Maven+Pro:wght@400;800&family=Roboto+Condensed&family=Source+Code+Pro&display=swap');
+$Mainfont: 'Maven Pro', sans-serif;
+
+/* Functions */
+@mixin flex_system($wrap, $center) {
+    display: flex;
+    flex-wrap: $wrap;
+    justify-content: $center;
+    align-items: $center;
+}
+

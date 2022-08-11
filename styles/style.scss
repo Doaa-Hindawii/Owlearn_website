@@ -1,0 +1,72 @@
+/* improt */
+@import "./items/Main";
+@import "./items/header";
+@import "./items/about-us";
+@import "./items/partners";
+@import "./items/course";
+@import "./items/CTA";
+@import "./items/graduated";
+@import "./items/testimonial";
+@import "./items/footer";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: $Mainfont;
+  color: $main-text-color;
+}
+
+.btn {
+  background-color: $primaryBtn-color;
+  color: $main-background-color;
+  padding: 1.4rem 3rem;
+  border: 1px solid $primaryBtn-color;
+  border-radius: .5rem;
+  cursor: pointer;
+
+  &:hover {
+    color: $primaryBtn-color;
+    background-color: $main-background-color;
+  }
+}
+
+.nav-btn {
+  @extend .btn;
+  color: $primaryBtn-color;
+  background-color: $main-background-color;
+  padding: 0rem 2.1rem;
+
+  &:hover, &.active {
+    color: $main-background-color;
+    background-color: $primaryBtn-color;
+  }
+}
+.contact-btn{
+  @extend .nav-btn;
+  padding: 1rem 2.1rem;
+  &:hover {
+    border: solid 1px $main-background-color;
+  }
+}
+.program-btn{
+  @extend .nav-btn;
+  padding: .8rem 2rem;
+  border-radius: 1.5rem;
+  border: 1px solid $main-text-linear-color;
+  color: $main-text-color;
+}
+.all-courses-btn {
+  @extend .nav-btn;
+  max-height: 3rem;
+  margin-top: 1.5rem;
+}
+.course-btn {
+  @extend .nav-btn;
+  max-height: 2rem;
+  margin-top: .6rem;
+}

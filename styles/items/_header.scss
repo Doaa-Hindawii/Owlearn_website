@@ -1,0 +1,155 @@
+/* imports */
+@import "./Main";
+@import "./nav";
+
+header {
+  background-color: $main-background-color;
+  overflow-x: hidden;
+
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.5em;
+    padding: 0rem 3rem;
+
+    .learning-content {
+      flex: 50%;
+
+      .learn-title {
+        font-size: 2.8em;
+        font-weight: 800;
+        margin-bottom: 2px;
+      }
+
+      .learning-text {
+        font-weight: 200;
+        line-height: 125%;
+      }
+
+      img {
+        width: 80%;
+        margin-top: 0px;
+      }
+
+      .testimonials {
+        display: flex;
+        flex-flow: row wrap;
+        padding-bottom: 5rem;
+        margin-left: 14rem;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        .te-images{
+          flex: 50%;
+          position: relative;
+        }
+        .Testimonial-3 {
+          width: 16%;
+          position: absolute;
+          z-index: 1;
+        }
+
+        .Testimonial-2 {
+          width: 16%;
+          position: absolute;
+          left: 3rem;
+          z-index: 2;
+        }
+
+        .Testimonial-1 {
+          width: 16%;
+          position: absolute;
+          left: 6.1rem;
+          z-index: 3;
+        }
+
+        .desc {
+          margin-left: 10rem;
+          flex: 50%;
+          .rate {
+            margin: 0px;
+
+            img {
+              width: 15%;
+            }
+          }
+
+          h6 {
+            margin: 0px;
+          }
+        }
+      }
+    }
+
+    .learning-video {
+      flex: 50%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .website-logo{
+     display: block;
+     text-align: center;
+  }
+  header .hero,
+  header .nav .nav-links,
+  nav .nav-links .nav-list {
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1.2em;
+
+    .learning-video {
+      order: 1;
+    }
+
+    .learning-content {
+      order: 2;
+
+      .testimonials {
+        display: flex;
+        width:60%;
+        margin-left: 12rem;
+        .te-images{
+          flex: 50%;
+          position: relative;
+          .Testimonial-3 {
+            width: 20%;
+            position: absolute;
+            z-index: 1;
+          }
+  
+          .Testimonial-2 {
+            width: 20%;
+            position: absolute;
+            left: 2rem;
+            z-index: 2;
+          }
+  
+          .Testimonial-1 {
+            width: 20%;
+            position: absolute;
+            left: 4rem;
+            z-index: 3;
+          }
+  
+        }
+        .desc {
+          flex: 50%;
+          margin-left: 2rem;
+          h6{
+            font-size: .5em;
+          }
+        }
+      }
+
+      .learn-title {
+        font-size: 2.4em;
+      }
+    }
+  }
+}

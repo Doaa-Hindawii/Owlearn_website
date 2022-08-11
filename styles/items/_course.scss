@@ -1,0 +1,140 @@
+/* imports */
+@import "./Main";
+
+.course-section {
+    padding: 1rem 4rem;
+    overflow-x: hidden;
+
+    .discover-courses {
+        @include flex_system(nowrap,space-between);
+        h2 {
+            font-size: 2.2em;
+        }
+    }
+
+    .carousel-wrapper {
+        @include flex_system(nowrap,space-between);
+        .carousel {
+            width: 90vw;
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .item {
+                flex-shrink: 0;
+                padding: 1rem;
+            }
+        }
+    }
+
+    .courses {
+        margin: 0px;
+        margin-top: 1rem;
+        @include flex_system(wrap,center);
+        .course-card {
+            flex: 1 30%;
+            text-align: left;
+            border: 2px solid $border-color;
+            border-radius: 1rem;
+            margin: .5rem;
+            cursor: pointer;
+            transition: all 0.5s;
+
+            &:hover {
+                transform: translateY(-10px);
+            }
+
+            .image {
+                position: relative;
+
+                .course-image {
+                    height: 200px;
+                    background-size: cover;
+                    background-position: center;
+                    border-radius: 1rem 1rem 0rem 0rem;
+
+                    span {
+                        position: absolute;
+                        z-index: 999;
+                        margin: 0 auto;
+                        padding: .4rem 1rem;
+                        border-radius: 1rem;
+                        width: fit-content;
+                        left: 0%;
+                        right: 70%;
+                        text-align: left;
+                        top: 80%;
+                        color: $primaryBtn-color;
+                        background-color: $main-background-color;
+                    }
+                }
+            }
+
+            .card-body {
+                padding: .2rem 1rem;
+
+                .date {
+                    margin-bottom: 8px;
+                    color: $third-color;
+                    font-weight: 400;
+                }
+
+                .title {
+                    margin: 0px;
+                    font-size: 1.2em;
+                    font-weight: 600;
+                    color: $title-text-card;
+                }
+
+                .description {
+                    color: $secondary-text-color;
+                }
+
+                .discount {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .price {
+                        font-style: italic;
+
+                        .sale {
+                            color: $primaryBtn-color;
+                        }
+
+                        .ended {
+                            text-decoration-line: line-through;
+                            font-weight: 200;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 800px) {
+    .course-section {
+        padding: 1rem;
+    }
+
+    .all-courses-btn {
+        max-height: 3rem;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .course-card {
+        flex: 1 90% !important;
+
+        .title {
+            font-size: 1em;
+        }
+    }
+}
